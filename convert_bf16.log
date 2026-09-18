@@ -1,0 +1,13 @@
+[convert] fold spec: block=1024 folded=401 inverse=1
+[convert] 100 text tensors (19s)
+[convert] 200 text tensors (27s)
+[convert] 300 text tensors (36s)
+[convert] 400 text tensors (45s)
+[convert] 500 text tensors (54s)
+[convert] 600 text tensors (62s)
+[convert] 700 text tensors (74s)
+[convert] 800 text tensors (82s)
+[convert] text done: 851 tensors (87s)
+[convert] vision done: 333 tensors
+[convert] saving 1184 tensors, 54.71 GB
+[convert] wrote /Users/david/llm/bonsai2-out/bf16 in 100s

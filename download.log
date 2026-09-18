@@ -1,0 +1,9 @@
+A new version of huggingface_hub (1.32.0) is available! You are using version 1.10.1.
+To update, run: brew upgrade hf
+
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Still waiting to acquire lock on /Users/david/llm/Bonsai2-gguf-src/.cache/huggingface/.gitignore.lock (elapsed: 0.2 seconds)
+Still waiting to acquire lock on /Users/david/llm/Bonsai2-gguf-src/.cache/huggingface/.gitignore.lock (elapsed: 0.2 seconds)
+Fetching 10 files:  10%|█         | 1/10 [00:00<00:04,  2.05it/s]Fetching 10 files:  50%|█████     | 5/10 [01:21<01:26, 17.35s/it]Fetching 10 files: 100%|██████████| 10/10 [01:21<00:00,  8.17s/it]
+/Users/david/llm/Bonsai2-gguf-src
+Fetching 23 files:   0%|          | 0/23 [00:00<?, ?it/s]Fetching 23 files:   4%|▍         | 1/23 [00:00<00:07,  2.82it/s]Fetching 23 files:  39%|███▉      | 9/23 [00:00<00:00, 17.77it/s]Fetching 23 files:  52%|█████▏    | 12/23 [00:19<00:23,  2.09s/it]Fetching 23 files: 100%|██████████| 23/23 [00:19<00:00,  1.19it/s]
+/Users/david/llm/Bonsai2-mlx2bit-src

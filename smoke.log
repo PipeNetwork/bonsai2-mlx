@@ -1,0 +1,64 @@
+===== strict 8bit =====
+[strict] loaded /Users/david/llm/bonsai2-out/8bit
+[strict] 2180 arrays, 8.027B params, 29.50 GB in memory
+[strict] checkpoint tensors not in model tree: 0
+[strict] model params not in checkpoint: 0
+[strict] dtype histogram: {'mlx.core.bfloat16': 1634, 'mlx.core.uint32': 498, 'mlx.core.float32': 48}
+[strict] OK
+===== strict 6bit =====
+[strict] loaded /Users/david/llm/bonsai2-out/6bit
+[strict] 2180 arrays, 6.346B params, 22.78 GB in memory
+[strict] checkpoint tensors not in model tree: 0
+[strict] model params not in checkpoint: 0
+[strict] dtype histogram: {'mlx.core.bfloat16': 1634, 'mlx.core.uint32': 498, 'mlx.core.float32': 48}
+[strict] OK
+===== strict 4bit =====
+[strict] loaded /Users/david/llm/bonsai2-out/4bit
+[strict] 2180 arrays, 4.665B params, 16.05 GB in memory
+[strict] checkpoint tensors not in model tree: 0
+[strict] model params not in checkpoint: 0
+[strict] dtype histogram: {'mlx.core.bfloat16': 1634, 'mlx.core.uint32': 498, 'mlx.core.float32': 48}
+[strict] OK
+===== smoke 4bit =====
+==========
+Files: [] 
+
+Prompt: <|im_start|>user
+Explain in two sentences why the sky is blue.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+Prefill:   0%|          | 0/23 [00:00<?, ?tok/s]Prefill:  96%|█████████▌| 22/23 [00:00<00:00, 53.31tok/s]Prefill:  96%|█████████▌| 22/23 [00:00<00:00, 53.27tok/s]
+The sky appears blue because molecules in the Earth's atmosphere scatter shorter wavelengths of sunlight, such as blue and violet, more effectively than longer wavelengths like red and orange. This phenomenon, known as Rayleigh scattering, causes the blue light to spread across the entire sky, making it appear blue to our eyes.
+==========
+Prompt: 23 tokens, 40.829 tokens-per-sec
+Generation: 62 tokens, 36.196 tokens-per-sec
+Peak memory: 16.352 GB
+
+--- output ---
+ The sky appears blue because molecules in the Earth's atmosphere scatter shorter wavelengths of sunlight, such as blue and violet, more effectively than longer wavelengths like red and orange. This phenomenon, known as Rayleigh scattering, causes the blue light to spread across the entire sky, making it appear blue to our eyes.
+===== smoke bf16 =====
+==========
+Files: [] 
+
+Prompt: <|im_start|>user
+Explain in two sentences why the sky is blue.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+Prefill:   0%|          | 0/23 [00:00<?, ?tok/s]Prefill:  96%|█████████▌| 22/23 [00:00<00:00, 40.57tok/s]Prefill:  96%|█████████▌| 22/23 [00:00<00:00, 40.55tok/s]
+The sky appears blue because molecules in the Earth's atmosphere scatter shorter wavelengths of sunlight, such as blue and violet, more effectively than longer wavelengths like red and orange. This phenomenon, known as Rayleigh scattering, causes the blue light to be dispersed across the sky, making it visible to our eyes.
+==========
+Prompt: 23 tokens, 31.143 tokens-per-sec
+Generation: 60 tokens, 12.263 tokens-per-sec
+Peak memory: 54.938 GB
+
+--- output ---
+ The sky appears blue because molecules in the Earth's atmosphere scatter shorter wavelengths of sunlight, such as blue and violet, more effectively than longer wavelengths like red and orange. This phenomenon, known as Rayleigh scattering, causes the blue light to be dispersed across the sky, making it visible to our eyes.
+SMOKE ALL DONE

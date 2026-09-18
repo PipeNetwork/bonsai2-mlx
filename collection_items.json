@@ -1,0 +1,4 @@
+[["pipenetwork/Ternary-Bonsai-2-27B-MLX-bf16", "54.7 GB. The unquantized standard-basis build: Hadamard rotation unfolded (proven exact), loads in stock mlx-vlm >= 0.7. ppl 8.9679 vs 8.9607 for prism's own runtime - a 0.08% rounding-level gap. The fine-tuning starting point."],
+ ["pipenetwork/Ternary-Bonsai-2-27B-MLX-8bit", "29.5 GB. Indistinguishable from bf16 (ppl 8.9636). Stock mlx-vlm."],
+ ["pipenetwork/Ternary-Bonsai-2-27B-MLX-6bit", "22.8 GB. Indistinguishable from bf16 (ppl 8.9548). Stock mlx-vlm."],
+ ["pipenetwork/Ternary-Bonsai-2-27B-MLX-4bit", "16.1 GB. +2.1% ppl (9.1497), the smallest stock-loadable build. For 8.6 GB lossless ternary use prism-ml's 2-bit pack with their runtime."]]

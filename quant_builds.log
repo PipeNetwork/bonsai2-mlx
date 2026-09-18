@@ -1,0 +1,13 @@
+[quant] loading /Users/david/llm/bonsai2-out/bf16
+[quant] quantizing bits=8 group_size=64
+[INFO] Quantized model with 8.627 bits per weight.
+[quant] wrote /Users/david/llm/bonsai2-out/8bit in 8s
+[quant] loading /Users/david/llm/bonsai2-out/bf16
+[quant] quantizing bits=6 group_size=64
+[INFO] Quantized model with 6.661 bits per weight.
+[quant] wrote /Users/david/llm/bonsai2-out/6bit in 7s
+[quant] loading /Users/david/llm/bonsai2-out/bf16
+[quant] quantizing bits=4 group_size=64
+[INFO] Quantized model with 4.695 bits per weight.
+[quant] wrote /Users/david/llm/bonsai2-out/4bit in 5s
+QUANT ALL DONE

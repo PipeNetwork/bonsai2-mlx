@@ -1,0 +1,5 @@
+[transformers] The tokenizer you are loading from '/Users/david/llm/bonsai2-out/bf16' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+bf16: max|d|=0.2165 mean|d|=0.01452 argmax=96.7%
+   pos 27: their top1-top2 margin = 0.0173
+   pos 46: their top1-top2 margin = 0.0231
+fp16-cast: max|d|=0.0516 mean|d|=0.00505 argmax=100.0%

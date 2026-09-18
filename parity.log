@@ -1,0 +1,31 @@
+[transformers] The tokenizer you are loading from '/Users/david/llm/bonsai2-out/bf16' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+== (a) unfold->refold round trip ==
+  language_model.model.layers.0.mlp.gate_proj: bitwise_exact=True max_err=0
+  language_model.model.layers.3.self_attn.o_proj: bitwise_exact=True max_err=0
+  language_model.model.layers.0.mlp.down_proj: bitwise_exact=True max_err=0
+  language_model.model.layers.0.linear_attn.out_proj: bitwise_exact=True max_err=0
+  language_model.lm_head: bitwise_exact=True max_err=0
+  language_model.model.embed_tokens[5 rows]: bitwise_exact=True
+== (d) their validation manifests ==
+  their reload-validation: {'reload_logits_exact': True, 'checked_logits': 248320, 'packed_modules': 402}
+  their tokenizer-validation: {'vocabulary_ids_match': True, 'bpe_merges_match': True}
+  our checkpoint covers all 402 transformed tensors: True
+  tokenizer.json byte-identical to pack: True
+[load] ours (stock mlx-vlm, strict)...
+== (e) norm-shift decision check ==
+  language_model.model.layers.0.input_layernorm.weight: in-memory == bf16(pack F32): True
+  language_model.model.layers.3.self_attn.q_norm.weight: in-memory == bf16(pack F32): True
+  language_model.model.norm.weight: in-memory == bf16(pack F32): True
+  language_model.model.layers.0.linear_attn.norm.weight: in-memory == bf16(pack F32): True
+[load] theirs (prism runtime)...
+== (b) real-weight logits parity ==
+  prompt0 (61 toks): max|dlogit|=0.2165 mean|dlogit|=0.01452 argmax_agree=96.7% cos(final)=0.999993 |logit|max=19.9
+  prompt1 (15 toks): max|dlogit|=0.2657 mean|dlogit|=0.01374 argmax_agree=100.0% cos(final)=0.999990 |logit|max=19.6
+  prompt2 (5 toks): max|dlogit|=0.2477 mean|dlogit|=0.01802 argmax_agree=100.0% cos(final)=0.999994 |logit|max=15.2
+  total compared positions: 81
+  greedy 64 steps: token match 36/64, first divergence at 36
+  theirs: '\n\nThe transform is defined by\n\nH_n = 1/sqrt(2^n) * M_n\n\nwhere M_n is the n-bit Hadamard matrix. For n = 1,'
+  ours:   '\n\nThe transform is defined by\n\nH_n = 1/sqrt(2^n) * M_n\n\nwhere M_n is the n-bit Hadamard matrix. For n=1, M'
+== (c) negative control: refold one layer (= skip its unfold) ==
+  ONE layer folded-in-place: max|dlogit|=9.289 argmax_agree=78.7% (should be far from 100%)
+ALL PARITY SECTIONS PASSED
